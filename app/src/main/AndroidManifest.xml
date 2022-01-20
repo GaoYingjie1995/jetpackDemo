@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyJetPack">
         <activity
+            android:name=".net.okhttp.OkhttpActivity"
+            android:exported="false" />
+        <activity
             android:name=".viewbinding.VBindingActivity"
             android:exported="false"
             android:label="@string/title_activity_vbinding"

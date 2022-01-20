@@ -7,17 +7,23 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/bt_livedata"
-        style="@style/CommonLargeButton"
-        android:text="LiveData"/>
-    <Button
-        android:id="@+id/bt_view_binding"
-        style="@style/CommonLargeButton"
-        android:text="ViewBinding"/>
-    <Button
-        android:id="@+id/bt_lifecycle"
-        style="@style/CommonLargeButton"
-        android:text="lifecycle"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_func"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+<!--    <Button-->
+<!--        android:id="@+id/bt_livedata"-->
+<!--        style="@style/CommonLargeButton"-->
+<!--        android:text="LiveData"/>-->
+<!--    <Button-->
+<!--        android:id="@+id/bt_view_binding"-->
+<!--        style="@style/CommonLargeButton"-->
+<!--        android:text="ViewBinding"/>-->
+<!--    <Button-->
+<!--        android:id="@+id/bt_lifecycle"-->
+<!--        style="@style/CommonLargeButton"-->
+<!--        android:text="lifecycle"/>-->
 
 </androidx.appcompat.widget.LinearLayoutCompat>
