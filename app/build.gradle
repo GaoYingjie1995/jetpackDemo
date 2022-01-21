@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 31
 
     defaultConfig {
         applicationId "com.example.myjetpack"
         minSdk 21
-        targetSdk 32
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 
@@ -35,11 +35,17 @@ android {
     buildFeatures {
         viewBinding true
     }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
 }
 
 dependencies {
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+    implementation 'junit:junit:4.12'
     def lifecycle_version = "2.4.0"
     def arch_version = "2.1.0"
     def activity_version = "1.4.0"
@@ -60,4 +66,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     // okhttp
     implementation("com.squareup.okhttp3:okhttp:4.9.3")
+    testImplementation 'org.robolectric:robolectric:4.6'
 }

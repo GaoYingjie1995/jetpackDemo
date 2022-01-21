@@ -7,25 +7,25 @@
     tools:context=".net.okhttp.OkhttpActivity">
 
     <Button
-        android:id="@+id/bt_get"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="get"
+        android:id="@+id/bt_get_sync"
+        style="@style/CommonButton"
+        android:text="sync get"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toStartOf="@+id/bt_post"
+        app:layout_constraintEnd_toStartOf="@+id/bt_post_sync"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/bt_post"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="post"
-        app:layout_constraintBottom_toBottomOf="@+id/bt_get"
+        android:id="@+id/bt_post_sync"
+        style="@style/CommonButton"
+        android:text="sync post"
+        app:layout_constraintBottom_toBottomOf="@+id/bt_get_sync"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/bt_get"
-        app:layout_constraintTop_toTopOf="@+id/bt_get" />
+        app:layout_constraintStart_toEndOf="@+id/bt_get_sync"
+        app:layout_constraintTop_toTopOf="@+id/bt_get_sync" />
+
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -33,4 +33,32 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.25" />
+
+    <Button
+        android:id="@+id/bt_get_async"
+        style="@style/CommonButton"
+        android:layout_marginTop="8dp"
+        android:text="async get"
+        app:layout_constraintEnd_toEndOf="@+id/bt_get_sync"
+        app:layout_constraintStart_toStartOf="@+id/bt_get_sync"
+        app:layout_constraintTop_toBottomOf="@+id/bt_get_sync" />
+
+    <Button
+        android:id="@+id/bt_post_async"
+        style="@style/CommonButton"
+        android:layout_marginTop="8dp"
+        android:text="async post"
+        app:layout_constraintEnd_toEndOf="@+id/bt_post_sync"
+        app:layout_constraintStart_toStartOf="@+id/bt_post_sync"
+        app:layout_constraintTop_toBottomOf="@+id/bt_post_sync" />
+
+    <Button
+        android:id="@+id/bt_get_query"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="get with query"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_get_async" />
 </androidx.constraintlayout.widget.ConstraintLayout>

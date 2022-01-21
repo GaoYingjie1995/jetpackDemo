@@ -20,6 +20,7 @@ import com.example.myjetpack.livedata.LiveDataActivity
 
 import com.example.myjetpack.livedata.LiveDataVM
 import com.example.myjetpack.livedata.UserInfo
+import com.example.myjetpack.net.okhttp.OkhttpActivity
 import com.example.myjetpack.viewbinding.VBindingActivity
 import com.example.myjetpack.viewmodel.MyViewModel
 
@@ -41,6 +42,9 @@ class MainActivity : BaseVBindingActivity<ActivityMainBinding>() {
         })
         funcList.add(FuncBean("Lifecycle") {
             startActivity(Intent(this, LifecycleActivity::class.java))
+        })
+        funcList.add(FuncBean("okHttp") {
+            startActivity(Intent(this, OkhttpActivity::class.java))
         })
         val adapter = FuncListAdapter(funcList)
         mVBinding.rvFunc.adapter = adapter
