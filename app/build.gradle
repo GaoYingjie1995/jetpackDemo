@@ -35,11 +35,6 @@ android {
     buildFeatures {
         viewBinding true
     }
-    testOptions {
-        unitTests {
-            includeAndroidResources = true
-        }
-    }
 }
 
 dependencies {
@@ -66,5 +61,4 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     // okhttp
     implementation("com.squareup.okhttp3:okhttp:4.9.3")
-    testImplementation 'org.robolectric:robolectric:4.6'
 }
