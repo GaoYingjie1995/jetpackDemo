@@ -10,6 +10,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModelLazy
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.myjetpack.activity.NavActivity
 import com.example.myjetpack.adapter.FuncListAdapter
 import com.example.myjetpack.base.BaseVBindingActivity
 import com.example.myjetpack.bean.FuncBean
@@ -45,6 +46,9 @@ class MainActivity : BaseVBindingActivity<ActivityMainBinding>() {
         })
         funcList.add(FuncBean("okHttp") {
             startActivity(Intent(this, OkhttpActivity::class.java))
+        })
+        funcList.add(FuncBean("navigation") {
+            startActivity(Intent(this, NavActivity::class.java))
         })
         val adapter = FuncListAdapter(funcList)
         mVBinding.rvFunc.adapter = adapter
